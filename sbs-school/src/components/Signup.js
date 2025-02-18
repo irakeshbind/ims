@@ -6,6 +6,7 @@ const Signup = () => {
   const [phone,setPhone]= useState('');
   const [password,setPassword]= useState('');
   const [image,setImage] = useState(null)
+  const [imageUrl,setImageUrl] = useState('');
   
 
   const submitHandler =(event)=>{ 
@@ -15,6 +16,7 @@ const Signup = () => {
 
   const fileHandler =(e)=>{
     setImage(e.target.files[0])
+    setImageUrl(URL.createObjectURL(e.target.files[0]))
   }
   return (
     <div className='signup-wrapper'>
@@ -35,6 +37,7 @@ const Signup = () => {
              <input onChange={e=>{setPhone(e.target.value)}} type='text' placeholder='Phone'/>
              <input onChange={e=>{setPassword(e.target.value)}} type='password' placeholder='Password'/>
              <input onChange={fileHandler} type='file'/>
+             <img alt='logo' src={imageUrl}/>
              <button type="submit">submit</button>
              </form>
         </div>
