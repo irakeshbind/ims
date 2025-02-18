@@ -1,5 +1,7 @@
 *{
   font-family: "Montserrat", serif;
+  outline:none;
+  border: none;
 }
 body {
   margin: 0;
