@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import './components/style.css'
+import { ToastContainer } from 'react-toastify';
 
 
 const App=()=>{
@@ -14,7 +15,10 @@ const App=()=>{
     
   ])
     return(
+      <>
          <RouterProvider router={myRouter}/>
+         <ToastContainer />
+      </>
     )
 }
 export default App
