@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import axios from 'axios';
 const Signup = () => {
   const [fullName,setFullName]= useState('');
   const [email,setEmail]= useState('');
@@ -7,11 +7,27 @@ const Signup = () => {
   const [password,setPassword]= useState('');
   const [image,setImage] = useState(null)
   const [imageUrl,setImageUrl] = useState('');
-  
+  const [isloading,setLoading] = useState(false)
 
   const submitHandler =(event)=>{ 
       event.preventDefault()
-    console.log(fullName,email,phone,password,image)
+      setLoading(true)
+    // console.log(fullName,email,phone,password,image)
+    const formData = new FormData();
+    formData.append('fullName',fullName);
+    formData.append('email',email);
+    formData.append('phone',phone);
+    formData.append('password',password);
+    formData.append('image',image);
+    axios.post('http://localhost:3000/user/Signup',formData)
+    .then(res=>{
+      setLoading(false)
+      console.log(res)
+    })
+    .catch(err=>{
+      setLoading(false)
+      console.log(err)
+    })
   }
 
   const fileHandler =(e)=>{
@@ -37,8 +53,8 @@ const Signup = () => {
              <input onChange={e=>{setPhone(e.target.value)}} type='text' placeholder='Phone'/>
              <input onChange={e=>{setPassword(e.target.value)}} type='password' placeholder='Password'/>
              <input onChange={fileHandler} type='file'/>
-             <img alt='logo' src={imageUrl}/>
-             <button type="submit">submit</button>
+             {imageUrl && <img alt='logo' src={imageUrl}/>}
+             <button type="submit">{isloading && <i class="fa-solid fa-spinner fa-spin-pulse"></i>}submit</button>
              </form>
         </div>
       </div>
