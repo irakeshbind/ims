@@ -64,8 +64,64 @@ align-items: center;
     color: white;
     border-radius: 10px;
     font-size: 15px;
+    cursor: pointer;
     /* height: 45px; */
 }
 .signup-form img{
     height:50px;
+}
+.link{
+    color: #33ff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+
+/* --------------dashboard-------------- */
+.dashboard-main-container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,rgb(221, 197, 197),hsl(288, 81%, 94%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-container{
+    width: 95%;
+    height: 95vh;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.nav-container{
+    width: 20%;
+    height: 95vh;
+    background-color: #7033ff;
+}
+.main-container{
+    width:80%;
+    height: 95vh;
+    background-color: white;
+}
+.top-bar{
+    height: 100px;
+    width: 100%;
+    background-color: #f5f7f8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+.logo-container{
+     width: 100px;
+     height: 100px;
+     background-color: red;
+     border-radius: 50%;
+     overflow: hidden;
+}
+.profile-logo{
+    width: 90px;
+    height: 90px;
 }

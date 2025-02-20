@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link,Navigate, useNavigate } from 'react-router-dom';
 const Signup = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -63,6 +63,7 @@ const Signup = () => {
             <input onChange={fileHandler} type='file' />
             {imageUrl && <img alt='logo' src={imageUrl} />}
             <button type="submit">{isloading && <i class="fa-solid fa-spinner fa-spin-pulse"></i>}submit</button>
+            <Link className='link' to='/Login'>Login With Your Account</Link>
           </form>
         </div>
       </div>
