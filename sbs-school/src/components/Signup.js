@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-// import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 const Signup = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -12,7 +12,7 @@ const Signup = () => {
   const [imageUrl, setImageUrl] = useState('');
   const [isloading, setLoading] = useState(false)
 
-  // const Navigate = useNavigate();
+  const Navigate = useNavigate();
 
   const submitHandler = (event) => {
     event.preventDefault()
@@ -27,12 +27,12 @@ const Signup = () => {
     axios.post('http://localhost:3000/user/Signup', formData)
       .then(res => {
         setLoading(false)
-        // toast.success('your account is created')
+        toast.success('your account is created')
         console.log(res)
       })
       .catch(err => {
         setLoading(false)
-        // Navigate('/login')
+        Navigate('/login')
         toast.error('something is wrong')
         console.log(err)
       })
@@ -56,10 +56,10 @@ const Signup = () => {
 
           <form onSubmit={submitHandler} className='signup-form'>
             <hq1>Create Your Account</hq1>
-            <input onChange={e => { setFullName(e.target.value) }} type='text' placeholder='Institute FullName' />
-            <input onChange={e => { setEmail(e.target.value) }} type='email' placeholder='Email' />
-            <input onChange={e => { setPhone(e.target.value) }} type='text' placeholder='Phone' />
-            <input onChange={e => { setPassword(e.target.value) }} type='password' placeholder='Password' />
+            <input required onChange={e => { setFullName(e.target.value) }} type='text' placeholder='Institute FullName' />
+            <input required onChange={e => { setEmail(e.target.value) }} type='email' placeholder='Email' />
+            <input required onChange={e => { setPhone(e.target.value) }} type='text' placeholder='Phone' />
+            <input required onChange={e => { setPassword(e.target.value) }} type='password' placeholder='Password' />
             <input onChange={fileHandler} type='file' />
             {imageUrl && <img alt='logo' src={imageUrl} />}
             <button type="submit">{isloading && <i class="fa-solid fa-spinner fa-spin-pulse"></i>}submit</button>
