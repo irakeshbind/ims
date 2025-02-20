@@ -12,9 +12,9 @@ const Dashboard = () => {
                         <div className='logo-container'>
                             <img className='profile-logo' src={require('./assets/img2.png')} />
                         </div>
-                        <div >
-                            <h2>ss Aademy</h2>
-                            <button>Logo</button>
+                        <div className='profile-container'>
+                            <h2 className='profile-name'>SS Academy</h2>
+                            <button className='logout-btn'>Logo</button>
                         </div>
                     </div>
                 </div>
