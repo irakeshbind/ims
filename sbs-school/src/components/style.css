@@ -194,3 +194,30 @@
 }
 
 /* --------menu container----------- */
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px; */
+}
+.menu-link{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+    /* background-color: red; */
+    width: 90%;
+    border-radius: 5px;
+}
+.menu-link:hover{
+    background-color: rgb(13, 13, 88);
+    transition: 0.5s;
+}
+.fa {
+    margin-right: 10px !important;
+}
+.contact-us{
+    position: absolute;
+    bottom: 5vh;
+    color:yellow
+}
