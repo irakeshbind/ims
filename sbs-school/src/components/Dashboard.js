@@ -1,12 +1,11 @@
 import React from 'react'
+import SideNav from './SideNav'
 
 const Dashboard = () => {
     return (
         <div className='dashboard-main-container'>
             <div className='dashboard-container'>
-                <div className='nav-container'>
-
-                </div>
+               <SideNav/>
                 <div className='main-container'>
                     <div className='top-bar'>
                         <div className='logo-container'>
