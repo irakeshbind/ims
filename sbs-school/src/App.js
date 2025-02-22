@@ -23,10 +23,10 @@ const App=()=>{
     {path:'login',Component:Login},
     {path:'signup',Component:Signup},
     {path:'dashboard',Component:Dashboard,children:[
-      {path:'',Component:Home},
+      {path:'home',Component:Home},
       {path:'courses',Component:Courses},
       {path:'add-course',Component:AddCourses},
-      {path:'students',Component:Students},
+      {path:'student',Component:Students},
       {path:'add-student',Component:AddStudent},
       {path:'collect-fee',Component:CollectFee},
       {path:'payment-history',Component:PaymentHistory},

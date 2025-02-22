@@ -11,14 +11,14 @@ const SideNav = () => {
                 </div>
             </div>
             <div className='menu-container'>
-            <Link className='menu-link' ><i className="fa fa-home" aria-hidden="true"></i> Home</Link>
-            <Link className='menu-link' ><i class="fa fa-book" aria-hidden="true"></i>All Courses</Link>
-                <Link className='menu-link'><i class="fa fa-plus" aria-hidden="true"></i>Add Courses</Link>
-                <Link className='menu-link' ><i class="fa fa-users" aria-hidden="true"></i>All Students</Link>
-                <Link className='menu-link' ><i class="fa fa-plus" aria-hidden="true"></i>Add Students</Link>
-                
-                <Link className='menu-link' ><i class="fa fa-credit-card" aria-hidden="true"></i>Collect Fee</Link>
-                <Link className='menu-link' ><i class="fa fa-list" aria-hidden="true"></i>Payment History</Link>
+                <Link to='/dashboard/home' className='menu-link' ><i className="fa fa-home" aria-hidden="true"></i> Home</Link>
+                <Link to='/dashboard/courses' className='menu-link' ><i class="fa fa-book" aria-hidden="true"></i>All Courses</Link>
+                <Link to='/dashboard/add-course' className='menu-link'><i class="fa fa-plus" aria-hidden="true"></i>Add Courses</Link>
+                <Link to='/dashboard/student' className='menu-link' ><i class="fa fa-users" aria-hidden="true"></i>All Students</Link>
+                <Link to='/dashboard/add-student' className='menu-link' ><i class="fa fa-plus" aria-hidden="true"></i>Add Students</Link>
+
+                <Link to='/dashboard/collect-fee' className='menu-link' ><i class="fa fa-credit-card" aria-hidden="true"></i>Collect Fee</Link>
+                <Link to='/dashboard/payment-history' className='menu-link' ><i class="fa fa-list" aria-hidden="true"></i>Payment History</Link>
 
             </div>
             <div className='contact-us'>
